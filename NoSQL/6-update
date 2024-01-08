@@ -1,8 +1,2 @@
-// Script that update the document with name "Holberton School"
-db.school.update(
-    { name: 'Holberton school' },
-    { $set: {
-        address: '972 Mission street'
-    }},
-    { multi: true }
-)
+// Update
+db.school.update({name: "Holberton school"}, { $set: {address: "972 Mission street"}}, {multi:true})
