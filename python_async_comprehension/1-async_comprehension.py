@@ -1,17 +1,12 @@
 #!/usr/bin/env python3
-"""coroutine"""
-import asyncio
-import time
-from typing import List
+"task 1: Async comprehension"
+from typing import Generator, List
+async_generator = __import__('0-async_generator').async_generator
 
 
-async_comprehension = __import__("1-async_comprehension").async_comprehension
-
-
-async def measure_runtime() -> float:
-    """ coroutine that will execute async_comprehension """
-    start_time = time.time()
-    await asyncio.gather(async_comprehension())
-    end_time = time.time()
-
-    return end_time - start_time
+async def async_comprehension() -> List[float]:
+    """this coroutine will collect 10 random numbers
+    using an async comprehension over async_generator, then
+    will return all those numbers."""
+    list_of_yields = [i async for i in async_generator()]
+    return list_of_yields
