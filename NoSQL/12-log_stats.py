@@ -4,6 +4,7 @@ from pymongo import MongoClient
 
 
 def analyze_logs(logs):
+    """ analyze logs function """
     methods = {
         'GET': 0,
         'POST': 0,
