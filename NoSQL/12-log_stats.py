@@ -26,6 +26,7 @@ def analyze_logs(logs):
 
 
 def print_results(log_count, methods, status_check):
+    """ print results """
     print(f"{log_count} logs\nMethods:")
     for method, count in methods.items():
         print(f"\tmethod {method}: {count}")
