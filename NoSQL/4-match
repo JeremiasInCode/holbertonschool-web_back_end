@@ -1,0 +1,6 @@
+// Script that displays a document with name "Holberton School"
+db.school.aggregate([
+    {
+        $match: {"name": "Holberton school"}
+    }
+])
