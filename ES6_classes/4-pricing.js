@@ -22,23 +22,22 @@ export default class Pricing {
   }
 
   displayFullPrice() {
-    const code = (this.currency._code);
-    const name = (this.currency._name);
+    const code = this.currency._code;
+    const name = this.currency._name;
     const money = `${this._amount} ${name} (${code})`;
 
     return money;
   }
 
   static convertPrice(amount = 0, conversionRate = 0) {
-    if (typeof (conversionRate) !== 'number') {
+    if (typeof conversionRate !== 'number') {
       throw new TypeError('conversionRate must be a number');
     }
 
-    if (typeof (amount) !== 'number') {
+    if (typeof amount !== 'number') {
       throw new TypeError('amount must be a number');
     }
 
-    return (amount * conversionRate);
+    return amount * conversionRate;
   }
-
 }
