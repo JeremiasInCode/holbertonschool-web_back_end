@@ -1,5 +1,5 @@
-export default function getStudentIdsSum(getListStudents) {
-  const idsStudents = getListStudents.map((idFinder) => idFinder.id);
+export default function getStudentIdsSum(listStudents) {
+  const idsStudents = listStudents.map((idFinder) => idFinder.id);
   const idsSummed = idsStudents.reduce((acum, actualNumber) => acum + actualNumber, 0);
-  return idsSummed
+  return idsSummed;
 }
